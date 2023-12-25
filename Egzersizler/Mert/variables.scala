@@ -1,6 +1,7 @@
-@main def variblesCast() = {
+@main def variblesCastDeneme() = {
     val a: Int = 9
-    val b: Char 
+    val b: Double = a
+    println(b)
 }
 
 
