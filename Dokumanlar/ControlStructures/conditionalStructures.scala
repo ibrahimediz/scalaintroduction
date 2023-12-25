@@ -10,7 +10,6 @@
         println("X çift bir sayıdır")
     end if
 
-
     // else kullanımı
     if x > 5 then
         println("x 5'ten büyük")
