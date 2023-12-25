@@ -1,4 +1,4 @@
-import scala.io.readLine
+import scala.io.StdIn.readLine
 
 //soru1
 def soru1() = {
@@ -24,14 +24,13 @@ def soru2() = {
     val isimler = List("++Ali", "++Veli", "++Buse")
     var yeniIsim = for isim <- isimler yield
         val kaldir = isim.drop(2)
-        //val ilkHarf = kaldir.head.toLower + kelime.tail
-        val ilkHarf = kaldir.toLowerCase()
-        ilkHarf
-        println(yeniIsim)
+        val kucukHarf = kaldir.toLowerCase()
+        kucukHarf
+    println(yeniIsim)
 
     val sayilar = 1 to 120 by 22
-    val sonuc = for sayi <- sayilar
-    if sayi % 4 == 0
-    yield sayi*2
+    val sonuc = for i <- sayilar
+    if i % 4 == 0
+    yield i*2
     println(sonuc)
 }
