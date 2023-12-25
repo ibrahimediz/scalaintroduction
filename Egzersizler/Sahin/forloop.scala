@@ -20,7 +20,18 @@ import scala.io.StdIn.readLine
 //*/
 //}
 
-
+@main def run()=
+   val isimler = List("++Ali","++Veli","++Buse")
+   val sayilar = 1 to 120 by 22
+   var soru1 = for isim <- isimler yield
+    val temiz = isim.drop(2)
+    //val harf = temiz.toLowerCase()
+    //harf
+    println(soru1)
+    val soru2 = for sayi <- sayilar
+    if sayi % 4 == 0
+    yield sayi*2
+    println(soru2)
 
 /*
 val isimler = List("++Ali","++Veli","++Buse")

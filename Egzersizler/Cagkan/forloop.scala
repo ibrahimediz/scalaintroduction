@@ -1,10 +1,16 @@
 import scala.io.StdIn.readLine
-@main def run()=
-    val x:Int=readLine("Sayıyı giriniz:").toInt
-    var y:Int=0
-      for (i <- 1 to x) {
+@main def run()={
+  val isimler=List("++Ali","++Veli","++Buse")
 
-        y+=i
-            println(s"İşlem Sonucu $y")
+  var Isim = for isim <- isimler yield
+    val temiz=isim.drop(2)
+    val harf= temiz.toLowerCase()
+    harf
+    println(Isim)
+
+
+    val sayilar= 1 to 120 by 22
+    val t2=for sayi<-sayilar
+    if sayi %4== 0
+    yield sayi *2
     }
-    

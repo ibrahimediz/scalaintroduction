@@ -21,5 +21,17 @@ def soru2() = {
 
 //soru3
 @main def soru3 = {
-    
+    val isimler = List("++Ali", "++Veli", "++Buse")
+    var yeniIsim = for isim <- isimler yield
+        val kaldir = isim.drop(2)
+        //val ilkHarf = kaldir.head.toLower + kelime.tail
+        val ilkHarf = kaldir.toLowerCase()
+        ilkHarf
+        println(yeniIsim)
+
+    val sayilar = 1 to 120 by 22
+    val sonuc = for sayi <- sayilar
+    if sayi % 4 == 0
+    yield sayi*2
+    println(sonuc)
 }
