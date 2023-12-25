@@ -31,3 +31,21 @@ import scala.io.StdIn.readLine
 Kullanıcı tarafından girilen sayıya kadar 9 ile tam bölünebilen sayıları ekrana yazdıran 
 scala kodunu yazınız
 */
+def sayi() = {
+    val girilenSayi: Int = readLine("Sayi Girin:").toInt
+    for i <- 1 to girilenSayi
+    if i % 9 == 0
+    do
+        println(i)
+}
+
+
+
+/*
+val isimler = List("++Ali","++Veli","++Buse")
+val sayilar = 1 to 120 by 22
+yukarıdaki listelerden faydalanarak 
+1. isimler listesinin List("ali","veli","buse") şeklinde dönüşmesini for ve yield kullanarak sağlayalım
+2. sayilar listesinin içerisinde 4 e tam olarak bölünen sayıların 5 katını ekrana yazdıralım
+*/
+

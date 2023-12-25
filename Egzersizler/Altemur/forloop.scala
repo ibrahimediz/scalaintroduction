@@ -8,3 +8,4 @@ import scala.io.StdIn.readLine
         x += i
     println(x)
 }
+

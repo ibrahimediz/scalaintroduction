@@ -56,10 +56,51 @@ def cokluUretgen()=
     do
         println(s"$i -- $j -- $k")
 // Guards 
-@main def guards()=
+def guards()=
     for i <- 1 to 100
     if i % 5 == 0
     if i % 7 == 0
     do
         println(i)
 
+// Map ile Kullanımı
+def mapilekullanim()=
+    val baskentler = Map(
+        "Turkiye" -> "Ankara",
+        "Almanya" -> "Berlin",
+        "Fransa" -> "Paris")
+    for (k,v) <- baskentler
+    do
+        println(k+"->"+v)
+// ##############################
+@main def yieldKullanimi()=
+    val l1 =
+        for i <- 5 to 7
+            yield i * 2 
+    println(l1) 
+    // ya da
+    val l2 = (5 to 7).map(i=>i*2)
+    println(l2)
+    // bir koleksiyon içinde elemanlara etki uygulamak için
+    // val isimList = List("_ahmet","_mehmet","_ayşe")
+    // var temizIsim = isimList.map(x=>x.drop(1))
+    // var basHarf = temizIsim.map(x=>x.capitalize)
+    // println(basHarf) 
+    // // ya da
+    // val isimList = List("_ahmet","_mehmet","_ayşe")
+    // var temizIsim = for isim <- isimList yield 
+    //     val temiz = isim.drop(1)
+    //     val basharf = temiz.capitalize
+    //     basharf
+    // println(temizIsim)
+
+    val sayilar = 1 to 20
+    println(sayilar.filter(x=>x>=3 && x <= 10))
+    // ya da 
+    print(for (x<-sayilar if x>=3 && x <= 10) yield x)
+    // ya da 
+    var y1 =  for x <- sayilar
+        if x>= 3
+        if x<=10
+    yield x
+    println(y1)
