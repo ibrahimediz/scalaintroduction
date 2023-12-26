@@ -7,7 +7,7 @@ import scala.io.StdIn.readLine
 @main def run()=
 
     val list = readLine("List'i giriniz:").toList
-    
-    println(s"Girilen liste: $list")
+    val temizList = list.drop(1)
+    println(s"Girilen liste: $temizList")
    
     
