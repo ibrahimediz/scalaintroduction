@@ -9,4 +9,8 @@ Yukarıdaki vektörlerden faydalanarak
 5. v5 o1 vektörü 3. elemandan itibaren başlayacak şekilde temizlensin
 6. v6 o2 vektöründeki 3 e bölünebilen sayılar listelensin
 */
+@main def run()={
 
+    val v2 = o1.zip(o2)
+
+}
