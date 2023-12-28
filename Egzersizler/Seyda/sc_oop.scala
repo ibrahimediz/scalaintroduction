@@ -7,13 +7,13 @@ class Hesap(hesapNumarası:Long , bakiye:Double ){
         val bakiye:Double = bakiye
         
         def paraYatir(miktar:Int):Int = {
-            bakiye = bakiye+miktar;
+            bakiye = bakiye+miktar
         }
         def paraCek(miktar:Int):Int = {
-            bakiye = bakiye-miktar;
+            bakiye = bakiye-miktar
         }
          def getBakiye:String = {
-        s"Bu hesapta ${ekmek.isim} TL bulunmaktadır"
+        s"Bu hesapta ${bakiye} TL bulunmaktadır."
     }
 }
 
